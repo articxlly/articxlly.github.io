@@ -1,12 +1,293 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Travel n' Go</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeetYou Transport - Cross-Border Charter Service</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  
-  <body>
-    <p>testpage</p>
-    <script src="tutorial32.js"></script>
-  </body>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#">MeetYou Transport</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#pricing" class="nav-link">Our Pricing</a></li>
+                <li><a href="#services" class="nav-link">Our Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact Us</a></li>
+                <li><a href="#booking" class="book-btn">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Your Trusted Cross-Border<br>Charter Service</h1>
+            <p>MeetYou Transport Service specializes in cross-border travel, connecting Singapore and Malaysia with professional charter solutions.</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">Learn More</a>
+                <a href="#booking" class="btn btn-secondary">Book Now</a>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,208C384,203,480,181,576,181.3C672,181,768,203,864,208C960,213,1056,203,1152,186.7C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-tag">About Us</span>
+                    <h2>Seamless Cross-Border Travel Solutions</h2>
+                    <p>With years of experience in cross-border transportation, MeetYou Transport Service has established itself as a trusted partner for travelers between Singapore and Malaysia.</p>
+                    <p>Our commitment to punctuality, comfort, and safety ensures that every journey is a pleasant experience. We understand the unique needs of cross-border travel and provide tailored solutions for individuals, families, and corporate clients.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>5000+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat">
+                            <h3>98%</h3>
+                            <p>On-Time Rate</p>
+                        </div>
+                        <div class="stat">
+                            <h3>24/7</h3>
+                            <p>Customer Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&h=400&fit=crop" alt="Cross border transport">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Services</span>
+                <h2>Premium Charter Services</h2>
+                <p>We offer a range of transportation solutions to meet your cross-border travel needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Private Car Charter</h3>
+                    <p>Comfortable sedans for individuals and small groups, perfect for business trips and family visits.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-van-shuttle"></i>
+                    </div>
+                    <h3>MPV/Van Service</h3>
+                    <p>Spacious vehicles for larger groups or extra luggage, ideal for family vacations.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3>Minibus Charter</h3>
+                    <p>Perfect for corporate events, school trips, or large group travel between borders.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Hourly Charter</h3>
+                    <p>Flexible hourly bookings for multi-stop trips or waiting time during your journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Pricing</span>
+                <h2>Transparent & Affordable Rates</h2>
+                <p>Competitive pricing with no hidden fees</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Standard</h3>
+                        <div class="price">
+                            <span class="currency">RM</span>
+                            <span class="amount">250</span>
+                            <span class="period">/trip</span>
+                        </div>
+                        <p>SG ↔ KL / JB</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 4 passengers</li>
+                        <li><i class="fas fa-check"></i> 2 luggage pieces</li>
+                        <li><i class="fas fa-check"></i> Air-conditioned vehicle</li>
+                        <li><i class="fas fa-check"></i> Basic insurance</li>
+                    </ul>
+                    <a href="#booking" class="btn-pricing">Book Now</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <div class="price">
+                            <span class="currency">RM</span>
+                            <span class="amount">450</span>
+                            <span class="period">/trip</span>
+                        </div>
+                        <p>SG ↔ KL / JB</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 7 passengers</li>
+                        <li><i class="fas fa-check"></i> 4 luggage pieces</li>
+                        <li><i class="fas fa-check"></i> Premium MPV</li>
+                        <li><i class="fas fa-check"></i> Complimentary water & WiFi</li>
+                        <li><i class="fas fa-check"></i> Comprehensive insurance</li>
+                    </ul>
+                    <a href="#booking" class="btn-pricing">Book Now</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Executive</h3>
+                        <div class="price">
+                            <span class="currency">RM</span>
+                            <span class="amount">800</span>
+                            <span class="period">/trip</span>
+                        </div>
+                        <p>SG ↔ KL / JB</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 15 passengers</li>
+                        <li><i class="fas fa-check"></i> 8 luggage pieces</li>
+                        <li><i class="fas fa-check"></i> Luxury minibus</li>
+                        <li><i class="fas fa-check"></i> Entertainment system</li>
+                        <li><i class="fas fa-check"></i> Priority immigration</li>
+                    </ul>
+                    <a href="#booking" class="btn-pricing">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Contact Us</span>
+                    <h2>Get in Touch</h2>
+                    <p>Ready to book your cross-border journey? Reach out to us anytime.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+60123456789">+60 12-345 6789</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:info@meetyoutransports.com">info@meetyoutransports.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/60123456789">+60 12-345 6789</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <h4>Website</h4>
+                                <a href="https://meetyoutransports.com" target="_blank">meetyoutransports.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="bookingForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <select required>
+                            <option value="">Select Service</option>
+                            <option>Singapore to Malaysia</option>
+                            <option>Malaysia to Singapore</option>
+                            <option>Round Trip</option>
+                        </select>
+                        <input type="date" required>
+                        <textarea rows="4" placeholder="Special Requests (optional)"></textarea>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>MeetYou Transport</h3>
+                    <p>Your trusted partner for cross-border travel between Singapore and Malaysia.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MeetYou Transport Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
