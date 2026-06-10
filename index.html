@@ -39,7 +39,10 @@
             <p>🚖 Reliable, comfortable, and professional cross-border taxi service. Book your premium ride today – 24/7 door-to-door service.</p>
             <div class="hero-buttons">
                 <!-- ONLY "Hire Now" button links to Google -->
-                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="hireNowBtn"><i class="fas fa-taxi"></i> Hire Now</a>
+                <!-- ULTIMATE FIX: Pure HTML link that CANNOT be blocked by JavaScript -->
+            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #e67e22; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.3s ease;">
+                <i class="fas fa-taxi"></i> Hire Now
+            </a>
                 <!-- "View Rates" button scrolls to fleet section -->
                 <a href="#services" class="btn btn-secondary">View Rates</a>
             </div>
