@@ -7,6 +7,7 @@
 body {
     font-family: 'Inter', sans-serif;
     color: #1a1a2e;
+    overflow-x: hidden;
 }
 
 .container {
@@ -20,9 +21,10 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: white;
+    background: rgba(255, 255, 255, 0.98);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
+    backdrop-filter: blur(5px);
 }
 
 .nav-container {
@@ -52,6 +54,11 @@ body {
     text-decoration: none;
     color: #1a1a2e;
     font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #e67e22;
 }
 
 .book-btn {
@@ -61,17 +68,26 @@ body {
     border-radius: 50px;
 }
 
+.book-btn:hover {
+    background: #d35400;
+    transform: scale(1.05);
+}
+
 .nav-toggle {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
-/* Hero Section - SIMPLE AND CLEAN */
+/* Hero Section - WITH BACKGROUND IMAGE (FIXED & WORKING) */
 .hero {
     position: relative;
     height: 100vh;
-    min-height: 600px;
+    min-height: 700px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/30211392/pexels-photo-30211392/free-photo-of-modern-toyota-car-on-malaysian-highway.jpeg?auto=compress&cs=tinysrgb&w=1600');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,42 +95,51 @@ body {
     color: white;
 }
 
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://images.pexels.com/photos/30211392/pexels-photo-30211392/free-photo-of-modern-toyota-car-on-malaysian-highway.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
-    background-size: cover;
-    z-index: -2;
-}
-
-.hero-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.55);
-}
-
 .hero-content {
     position: relative;
     z-index: 10;
-    max-width: 800px;
+    max-width: 900px;
     padding: 0 20px;
+    animation: fadeInUp 1s ease-out;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    font-weight: 800;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+}
+
+/* Features - 1x4 Grid */
+.hero-features {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.feature-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: rgba(230, 126, 34, 0.8);
+    transform: translateY(-3px);
 }
 
 .hero-buttons {
@@ -137,11 +162,13 @@ body {
 .btn-primary {
     background: #e67e22;
     color: white;
+    box-shadow: 0 5px 15px rgba(230,126,34,0.4);
 }
 
 .btn-primary:hover {
     background: #d35400;
-    transform: scale(1.05);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(230,126,34,0.5);
 }
 
 .btn-secondary {
@@ -153,9 +180,10 @@ body {
 .btn-secondary:hover {
     background: white;
     color: #e67e22;
+    transform: translateY(-3px);
 }
 
-/* Sections */
+/* Section Styles */
 .section-tag {
     display: inline-block;
     background: #fde6d2;
@@ -171,9 +199,20 @@ body {
     text-align: center;
 }
 
+.about {
+    background: #f9f9ff;
+}
+
 .about h2, .services h2, .locations h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+    line-height: 1.6;
 }
 
 .stats {
@@ -188,6 +227,11 @@ body {
     color: #e67e22;
 }
 
+/* Services Grid */
+.services {
+    background: white;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -198,19 +242,85 @@ body {
 .service-card {
     background: white;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-color: #e67e22;
 }
 
 .service-icon {
     font-size: 2.5rem;
     color: #e67e22;
     margin-bottom: 1rem;
+}
+
+.vehicle-badge {
+    display: inline-block;
+    background: #fde6d2;
+    color: #e67e22;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* Locations Section */
+.locations {
+    background: #f9f9ff;
+}
+
+.location-featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.location-featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.location-featured-content {
+    padding: 2rem;
+    text-align: left;
+}
+
+.location-badge {
+    display: inline-block;
+    background: #e67e22;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.attraction-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.attraction-tags span {
+    background: #fde6d2;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
 }
 
 .locations-grid {
@@ -223,8 +333,71 @@ body {
 .location-card {
     background: white;
     padding: 1.5rem;
-    border-radius: 15px;
+    border-radius: 20px;
+    text-align: center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    position: relative;
+    padding-top: 2.5rem;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+}
+
+.location-icon {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e67e22;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.attraction-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.attraction-list span {
+    background: #fde6d2;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+}
+
+/* Booking Section */
+.booking {
+    background: white;
+}
+
+.booking-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: #fef9f2;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.booking-text {
+    padding: 3rem;
+    text-align: left;
+}
+
+.booking-text h2 {
+    font-size: 2rem;
 }
 
 .btn-primary-large {
@@ -235,7 +408,7 @@ body {
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     transition: all 0.3s;
 }
 
@@ -244,15 +417,79 @@ body {
     transform: scale(1.05);
 }
 
+.booking-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Footer */
 .footer {
     background: #1a1a2e;
+    color: #ccc;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-logo h3 {
+    color: #e67e22;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e67e22;
+}
+
+.social-icons a {
     color: white;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e67e22;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
     text-align: center;
-    padding: 2rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive */
 @media (max-width: 992px) {
+    .hero-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -272,6 +509,7 @@ body {
         transition: 0.3s;
         padding: 2rem;
         gap: 1rem;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
     .nav-menu.active {
         left: 0;
@@ -279,14 +517,23 @@ body {
     .nav-toggle {
         display: block;
     }
-    .services-grid, .locations-grid {
-        grid-template-columns: 1fr;
-    }
     .hero-content h1 {
         font-size: 2rem;
+    }
+    .hero-features {
+        grid-template-columns: 1fr;
+    }
+    .services-grid, .locations-grid, .location-featured, .booking-wrapper {
+        grid-template-columns: 1fr;
     }
     .stats {
         flex-direction: column;
         gap: 1rem;
+    }
+    .location-featured-content {
+        text-align: center;
+    }
+    .attraction-tags {
+        justify-content: center;
     }
 }
