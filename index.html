@@ -9,17 +9,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Language Toggle Button - Fixed at Top Left -->
-    <div class="language-toggle" id="languageToggle">
-        <button class="lang-btn" id="langBtn">
-            <i class="fas fa-globe"></i>
-            <span id="langText">中文</span>
-        </button>
-    </div>
-
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo"><a href="#">MeetYou Taxi</a></div>
+            <div class="logo-wrapper">
+                <div class="logo"><a href="#">MeetYou Taxi</a></div>
+                <!-- Language Toggle Button right beside the logo -->
+                <button class="lang-btn" id="langBtn">
+                    <i class="fas fa-globe"></i>
+                    <span id="langText">中文</span>
+                </button>
+            </div>
             <div class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link" data-en="Home" data-zh="首页">Home</a></li>
