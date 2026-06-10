@@ -1,9 +1,6 @@
 // Language state
 let currentLanguage = 'en'; // 'en' or 'zh'
 
-// Get reference to language toggle container
-const languageToggle = document.getElementById('languageToggle');
-
 // Mobile menu toggle
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
@@ -50,15 +47,6 @@ function switchLanguage(lang) {
         langBtnText.textContent = currentLanguage === 'en' ? '中文' : 'EN';
     }
     
-    // Update language toggle container class for button positioning
-    if (languageToggle) {
-        if (currentLanguage === 'en') {
-            languageToggle.classList.add('english-mode');
-        } else {
-            languageToggle.classList.remove('english-mode');
-        }
-    }
-    
     // Update all elements with data-en and data-zh attributes
     const elementsWithData = document.querySelectorAll('[data-en][data-zh]');
     
@@ -86,21 +74,7 @@ function switchLanguage(lang) {
         }
     });
     
-    // Handle placeholder images text - update alt attributes if needed
-    const images = document.querySelectorAll('img');
-    images.forEach(function(img) {
-        if (currentLanguage === 'en') {
-            if (img.hasAttribute('data-alt-en')) {
-                img.alt = img.getAttribute('data-alt-en');
-            }
-        } else {
-            if (img.hasAttribute('data-alt-zh')) {
-                img.alt = img.getAttribute('data-alt-zh');
-            }
-        }
-    });
-    
-    console.log('Language switched to: ' + (currentLanguage === 'en' ? 'English' : '中文') + ' - Button position adjusted');
+    console.log('Language switched to: ' + (currentLanguage === 'en' ? 'English' : '中文'));
 }
 
 // Language toggle button event listener
@@ -115,9 +89,4 @@ if (langToggleBtn) {
     });
 }
 
-// Initialize button position for English (default)
-if (languageToggle && currentLanguage === 'en') {
-    languageToggle.classList.add('english-mode');
-}
-
-console.log('✅ Website loaded - Language toggle button adjusts position based on language!');
+console.log('✅ Website loaded - Language button placed beside logo, mobile compatible!');
