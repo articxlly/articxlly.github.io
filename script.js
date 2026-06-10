@@ -17,8 +17,9 @@ document.querySelectorAll('.nav-link, .book-btn').forEach(link => {
     });
 });
 
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]:not([href="https://www.google.com"])').forEach(anchor => {
+// Smooth scroll for anchor links (ALL internal links work normally)
+// The ONLY button that goes to Google is "Hire Now" (it has target="_blank")
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
         if (href && href.startsWith('#')) {
@@ -57,16 +58,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Popup hover effect (additional interactive popup for buttons)
-document.querySelectorAll('.btn, .btn-pricing, .btn-cta, .btn-primary-large, .book-btn, .social-icons a').forEach(button => {
-    button.addEventListener('mouseenter', function() {
-        // Simple scale effect is already in CSS, this adds a subtle sound-like visual feedback
-        this.style.cursor = 'pointer';
-    });
-    button.addEventListener('mouseleave', function() {
-        // Reset any inline styles if needed
-    });
-});
-
-// Console log for confirmation
-console.log('MeetYou Taxi website loaded - all buttons have hover effects and link to Google');
+// All buttons retain hover effects (already in CSS)
+// No additional changes needed
+console.log('MeetYou Taxi website loaded - Only "Hire Now" button links to Google');
