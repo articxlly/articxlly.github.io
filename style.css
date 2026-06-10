@@ -626,4 +626,47 @@ body {
     }
 }
 
-@media
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        padding: 2rem 0;
+        gap: 1rem;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .nav-toggle {
+        display: block;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .about-grid,
+    .location-featured,
+    .booking-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .stats {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-features {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .service-card {
+        padding: 1.5rem;
+    }
+}
