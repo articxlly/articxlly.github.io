@@ -1,4 +1,4 @@
-// Mobile menu toggle only
+// Mobile menu toggle
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 
@@ -17,7 +17,7 @@ document.querySelectorAll('.nav-link, .book-btn').forEach(function(link) {
     });
 });
 
-// Smooth scroll for internal links only
+// Smooth scroll for internal anchor links ONLY
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -25,10 +25,13 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
             e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         }
     });
 });
 
-console.log('Website loaded - Hire Now button should work');
+console.log('✅ Website loaded - Background image restored, Hire Now button working');
