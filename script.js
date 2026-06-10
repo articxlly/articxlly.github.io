@@ -34,4 +34,4 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     });
 });
 
-console.log('✅ Website loaded - Background image restored, Hire Now button working');
+console.log('✅ Website loaded - Service cards now have vehicle images!');
