@@ -227,7 +227,7 @@ body {
     color: #e67e22;
 }
 
-/* Services / Fleet Cards - CENTERED FIX */
+/* Services / Fleet Cards - COMPLETE MARGIN RESET */
 .services {
     background: white;
 }
@@ -237,7 +237,10 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-top: 2rem;
-    /* FIX: Ensure no extra spacing on sides */
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
 }
 
@@ -248,8 +251,8 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
     border: 1px solid #f0f0f0;
-    /* FIX: Ensure card takes full width of grid cell */
     width: 100%;
+    margin: 0;
 }
 
 .service-card:hover {
@@ -347,7 +350,7 @@ body {
     font-size: 0.7rem;
 }
 
-/* Locations Section - CENTERED FIX */
+/* Locations Section - COMPLETE MARGIN RESET */
 .locations {
     background: #f9f9ff;
 }
@@ -360,6 +363,8 @@ body {
     border-radius: 30px;
     overflow: hidden;
     margin-bottom: 3rem;
+    margin-left: 0;
+    margin-right: 0;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     width: 100%;
 }
@@ -399,7 +404,7 @@ body {
     font-size: 0.85rem;
 }
 
-/* Location Cards Grid - FULLY CENTERED */
+/* Location Cards Grid - COMPLETE MARGIN RESET & CENTERED */
 .locations-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -407,7 +412,10 @@ body {
     margin-top: 2rem;
     margin-left: 0;
     margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
+    justify-content: center;
 }
 
 .location-card {
@@ -419,6 +427,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin: 0;
 }
 
 .location-card:hover {
@@ -515,6 +524,7 @@ body {
     border-radius: 30px;
     overflow: hidden;
     width: 100%;
+    margin: 0;
 }
 
 .booking-text {
