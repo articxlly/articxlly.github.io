@@ -1,4 +1,4 @@
-// Mobile menu toggle
+// Mobile menu toggle only
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 
@@ -17,7 +17,7 @@ document.querySelectorAll('.nav-link, .book-btn').forEach(function(link) {
     });
 });
 
-// Smooth scroll for anchor links ONLY (does NOT affect Hire Now button)
+// Smooth scroll for internal links only
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -25,17 +25,10 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
             e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
     });
 });
 
-// Log to confirm button is working
-const hireBtn = document.getElementById('hireNowBtn');
-if (hireBtn) {
-    console.log('✅ Hire Now button found - it will open Google when clicked');
-}
+console.log('Website loaded - Hire Now button should work');
