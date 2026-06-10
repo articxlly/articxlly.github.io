@@ -67,13 +67,11 @@ body {
     cursor: pointer;
 }
 
-/* Hero Section - FIXED Z-INDEX */
+/* Hero Section - SIMPLE AND CLEAN */
 .hero {
     position: relative;
     height: 100vh;
     min-height: 600px;
-    background: url('https://images.pexels.com/photos/30211392/pexels-photo-30211392/free-photo-of-modern-toyota-car-on-malaysian-highway.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
-    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,22 +79,30 @@ body {
     color: white;
 }
 
-/* Overlay - lower z-index so it doesn't cover buttons */
-.hero-overlay {
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.pexels.com/photos/30211392/pexels-photo-30211392/free-photo-of-modern-toyota-car-on-malaysian-highway.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
+    background-size: cover;
+    z-index: -2;
+}
+
+.hero-bg::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.55);
-    z-index: 1;
-    pointer-events: none; /* KEY FIX: prevents overlay from blocking clicks */
 }
 
-/* Content - higher z-index, and must be clickable */
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 10;
     max-width: 800px;
     padding: 0 20px;
 }
@@ -111,7 +117,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Buttons - must have proper stacking */
 .hero-buttons {
     display: flex;
     gap: 1rem;
@@ -127,8 +132,6 @@ body {
     font-weight: 700;
     transition: all 0.3s ease;
     cursor: pointer;
-    position: relative;
-    z-index: 3; /* Extra safety */
 }
 
 .btn-primary {
@@ -150,15 +153,6 @@ body {
 .btn-secondary:hover {
     background: white;
     color: #e67e22;
-}
-
-.hero-wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    line-height: 0;
 }
 
 /* Sections */
