@@ -17,11 +17,12 @@ document.querySelectorAll('.nav-link, .book-btn').forEach(link => {
     });
 });
 
-// Smooth scroll for anchor links (ALL internal links work normally)
+// Smooth scroll for INTERNAL anchor links ONLY (links that start with #)
+// This does NOT affect external links like "Hire Now" going to Google
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
-        if (href && href.startsWith('#')) {
+        if (href && href.startsWith('#') && href !== '#') {
             e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
@@ -57,4 +58,13 @@ window.addEventListener('scroll', () => {
     });
 });
 
-console.log('MeetYou Taxi website loaded - Fleet section margins fixed');
+// Ensure "Hire Now" button works (logs to console for debugging)
+const hireNowBtn = document.getElementById('hireNowBtn');
+if (hireNowBtn) {
+    hireNowBtn.addEventListener('click', function() {
+        console.log('Hire Now button clicked - redirecting to https://www.google.com');
+        // No preventDefault() here - let the link work normally
+    });
+}
+
+console.log('MeetYou Taxi website loaded - "Hire Now" button links to Google, all other buttons scroll smoothly');
