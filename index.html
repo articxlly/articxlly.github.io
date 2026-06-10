@@ -25,28 +25,29 @@
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About Us</a></li>
                 <li><a href="#services" class="nav-link">Our Fleet</a></li>
-                <li><a href="#pricing" class="nav-link">Our Pricing</a></li>
                 <li><a href="#locations" class="nav-link">Destinations</a></li>
                 <li><a href="#booking" class="book-btn">Book Now</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section: Premium Taxi Service with KL Car Background -->
+    <!-- Hero Section: Premium Taxi Service with Malaysian Car & KL Background -->
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Premium Taxi & Van Hire<br>SG ↔ Malaysia</h1>
             <p>🚖 Reliable, comfortable, and professional cross-border taxi service. Book your premium ride today – 24/7 door-to-door service.</p>
             <div class="hero-buttons">
+                <!-- ONLY THIS BUTTON links to Google -->
                 <a href="https://www.google.com" target="_blank" class="btn btn-primary"><i class="fas fa-taxi"></i> Hire Now</a>
-                <a href="#pricing" class="btn btn-secondary">View Rates</a>
+                <!-- THIS BUTTON scrolls to fleet section (original functionality) -->
+                <a href="#services" class="btn btn-secondary">View Rates</a>
             </div>
             <div class="hero-features">
-                <span><i class="fas fa-check-circle"></i> Instant Booking</span>
-                <span><i class="fas fa-shield-alt"></i> Safe & Insured</span>
-                <span><i class="fas fa-clock"></i> 24/7 Support</span>
-                <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                <div class="feature-item"><i class="fas fa-check-circle"></i> Instant Booking</div>
+                <div class="feature-item"><i class="fas fa-shield-alt"></i> Safe & Insured</div>
+                <div class="feature-item"><i class="fas fa-clock"></i> 24/7 Support</div>
+                <div class="feature-item"><i class="fas fa-wifi"></i> Free WiFi</div>
             </div>
         </div>
         <div class="hero-wave">
@@ -81,13 +82,13 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&h=400&fit=crop" alt="Premium taxi service Malaysia">
+                    <img src="https://images.pexels.com/photos/30210215/pexels-photo-30210215/free-photo-of-petronas-twin-towers-at-sunset-kuala-lumpur.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Petronas Twin Towers Kuala Lumpur Malaysia">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services / Fleet Section - Only Cars & Vans -->
+    <!-- Services / Fleet Section - Only Cars & Vans (NO PRICING SECTION) -->
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
@@ -132,77 +133,6 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Our Pricing</span>
-                <h2>Transparent & Affordable Rates</h2>
-                <p>No hidden fees — what you see is what you pay</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Executive Sedan</h3>
-                        <div class="price">
-                            <span class="currency">RM</span>
-                            <span class="amount">250</span>
-                            <span class="period">/trip</span>
-                        </div>
-                        <p>SG ↔ KL / JB</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Up to 4 passengers</li>
-                        <li><i class="fas fa-check"></i> 2 luggage pieces</li>
-                        <li><i class="fas fa-check"></i> Air-conditioned sedan</li>
-                        <li><i class="fas fa-check"></i> Basic insurance</li>
-                        <li><i class="fas fa-check"></i> Complimentary water</li>
-                    </ul>
-                    <a href="https://www.google.com" target="_blank" class="btn-pricing">Book Now</a>
-                </div>
-                <div class="pricing-card popular">
-                    <div class="popular-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>Premium MPV</h3>
-                        <div class="price">
-                            <span class="currency">RM</span>
-                            <span class="amount">450</span>
-                            <span class="period">/trip</span>
-                        </div>
-                        <p>SG ↔ KL / JB</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Up to 7 passengers</li>
-                        <li><i class="fas fa-check"></i> 4 luggage pieces</li>
-                        <li><i class="fas fa-check"></i> Premium MPV</li>
-                        <li><i class="fas fa-check"></i> Complimentary water & WiFi</li>
-                        <li><i class="fas fa-check"></i> Comprehensive insurance</li>
-                    </ul>
-                    <a href="https://www.google.com" target="_blank" class="btn-pricing">Book Now</a>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Luxury Van</h3>
-                        <div class="price">
-                            <span class="currency">RM</span>
-                            <span class="amount">650</span>
-                            <span class="period">/trip</span>
-                        </div>
-                        <p>SG ↔ KL / JB</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Up to 10 passengers</li>
-                        <li><i class="fas fa-check"></i> 6 luggage pieces</li>
-                        <li><i class="fas fa-check"></i> Luxury van</li>
-                        <li><i class="fas fa-check"></i> Entertainment system</li>
-                        <li><i class="fas fa-check"></i> Extra legroom</li>
-                    </ul>
-                    <a href="https://www.google.com" target="_blank" class="btn-pricing">Book Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Location Section: KL & Tourist Attractions in Malaysia -->
     <section id="locations" class="locations">
         <div class="container">
@@ -214,7 +144,7 @@
             
             <div class="location-featured">
                 <div class="location-featured-image">
-                    <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&h=500&fit=crop" alt="Kuala Lumpur city skyline with Petronas Twin Towers">
+                    <img src="https://images.pexels.com/photos/30210215/pexels-photo-30210215/free-photo-of-petronas-twin-towers-at-sunset-kuala-lumpur.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="Kuala Lumpur city skyline with Petronas Twin Towers">
                 </div>
                 <div class="location-featured-content">
                     <div class="location-badge">Must Visit</div>
@@ -232,7 +162,7 @@
             <div class="locations-grid">
                 <div class="location-card">
                     <div class="location-image">
-                        <img src="https://images.unsplash.com/photo-1626697569171-5f42f9b6c257?w=400&h=250&fit=crop" alt="Penang">
+                        <img src="https://images.pexels.com/photos/16819744/pexels-photo-16819744/free-photo-of-george-town-malaysia.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop" alt="Penang">
                     </div>
                     <div class="location-info">
                         <div class="location-icon"><i class="fas fa-umbrella-beach"></i></div>
@@ -247,7 +177,7 @@
                 </div>
                 <div class="location-card">
                     <div class="location-image">
-                        <img src="https://images.unsplash.com/photo-1582345389518-53a9a1daffbb?w=400&h=250&fit=crop" alt="Melaka">
+                        <img src="https://images.pexels.com/photos/17841171/pexels-photo-17841171/free-photo-of-the-dutch-square-in-melaka-malaysia.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop" alt="Melaka">
                     </div>
                     <div class="location-info">
                         <div class="location-icon"><i class="fas fa-landmark"></i></div>
@@ -262,7 +192,7 @@
                 </div>
                 <div class="location-card">
                     <div class="location-image">
-                        <img src="https://images.unsplash.com/photo-1569167772743-4ea01735d0ed?w=400&h=250&fit=crop" alt="Genting Highlands">
+                        <img src="https://images.pexels.com/photos/22596709/pexels-photo-22596709/free-photo-of-genting-highlands-malaysia.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop" alt="Genting Highlands">
                     </div>
                     <div class="location-info">
                         <div class="location-icon"><i class="fas fa-mountain"></i></div>
@@ -277,7 +207,7 @@
                 </div>
                 <div class="location-card">
                     <div class="location-image">
-                        <img src="https://images.unsplash.com/photo-1631487732435-907d8f8e1e60?w=400&h=250&fit=crop" alt="Langkawi">
+                        <img src="https://images.pexels.com/photos/17676557/pexels-photo-17676557/free-photo-of-langkawi-skybridge-malaysia.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop" alt="Langkawi">
                     </div>
                     <div class="location-info">
                         <div class="location-icon"><i class="fas fa-water"></i></div>
@@ -292,7 +222,7 @@
                 </div>
                 <div class="location-card">
                     <div class="location-image">
-                        <img src="https://images.unsplash.com/photo-1580516378772-3e480b1d668b?w=400&h=250&fit=crop" alt="Johor Bahru">
+                        <img src="https://images.pexels.com/photos/20392815/pexels-photo-20392815/free-photo-of-johor-bahru-malaysia-skyline.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop" alt="Johor Bahru">
                     </div>
                     <div class="location-info">
                         <div class="location-icon"><i class="fas fa-city"></i></div>
@@ -307,7 +237,7 @@
                 </div>
                 <div class="location-card">
                     <div class="location-image">
-                        <img src="https://images.unsplash.com/photo-1608148182726-eae2947a85f1?w=400&h=250&fit=crop" alt="Ipoh">
+                        <img src="https://images.pexels.com/photos/21342811/pexels-photo-21342811/free-photo-of-ipoh-old-town-malaysia.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop" alt="Ipoh">
                     </div>
                     <div class="location-info">
                         <div class="location-icon"><i class="fas fa-mug-hot"></i></div>
@@ -325,12 +255,13 @@
             <div class="location-cta">
                 <h3>Ready to explore Malaysia?</h3>
                 <p>Book your premium taxi with MeetYou Taxi today and travel in comfort to any of these amazing destinations.</p>
-                <a href="https://www.google.com" target="_blank" class="btn-cta"><i class="fas fa-taxi"></i> Book Your Ride Now</a>
+                <!-- This button scrolls to booking section (NOT Google) -->
+                <a href="#booking" class="btn-cta"><i class="fas fa-taxi"></i> Book Your Ride Now</a>
             </div>
         </div>
     </section>
 
-    <!-- Simple Booking Section -->
+    <!-- Quick Booking Section (NO PRICING, NO BILLING) -->
     <section id="booking" class="booking">
         <div class="container">
             <div class="booking-wrapper">
@@ -338,10 +269,11 @@
                     <span class="section-tag">Quick Booking</span>
                     <h2>Ready to travel?</h2>
                     <p>Book your premium taxi service in seconds. Click the button below to get started.</p>
-                    <a href="https://www.google.com" target="_blank" class="btn-primary-large"><i class="fas fa-arrow-right"></i> Book Your Ride</a>
+                    <!-- This button scrolls to contact (original functionality) - NOT Google -->
+                    <a href="#booking" class="btn-primary-large"><i class="fas fa-arrow-right"></i> Book Your Ride</a>
                 </div>
                 <div class="booking-image">
-                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop" alt="Comfortable taxi ride">
+                    <img src="https://images.pexels.com/photos/30211431/pexels-photo-30211431/free-photo-of-modern-toyota-innova-driving-on-malaysian-road.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Comfortable taxi ride in Malaysia">
                 </div>
             </div>
         </div>
@@ -365,7 +297,6 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#services">Our Fleet</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#locations">Destinations</a></li>
                     </ul>
                 </div>
