@@ -16,47 +16,6 @@ body {
     padding: 0 20px;
 }
 
-/* ==================== LANGUAGE TOGGLE BUTTON ==================== */
-.language-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1001;
-    transition: top 0.3s ease;
-}
-
-/* When English mode is active, button sits higher */
-.language-toggle.english-mode {
-    top: 12px;
-}
-
-.lang-btn {
-    background: #e67e22;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    backdrop-filter: blur(5px);
-}
-
-.lang-btn:hover {
-    background: #d35400;
-    transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-}
-
-.lang-btn i {
-    font-size: 16px;
-}
-
 /* Navigation */
 .navbar {
     position: fixed;
@@ -75,6 +34,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Logo Wrapper - contains logo and language button side by side */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .logo a {
@@ -82,6 +49,32 @@ body {
     font-weight: 800;
     color: #e67e22;
     text-decoration: none;
+}
+
+/* Language Button - right beside the logo */
+.lang-btn {
+    background: transparent;
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    padding: 0.4rem 0.9rem;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: #e67e22;
+    color: white;
+    transform: scale(1.05);
+}
+
+.lang-btn i {
+    font-size: 12px;
 }
 
 .nav-menu {
@@ -678,17 +671,27 @@ body {
 }
 
 @media (max-width: 768px) {
-    .language-toggle {
-        top: 10px;
-        left: 10px;
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
     }
-    .language-toggle.english-mode {
-        top: 8px;
+    
+    .logo-wrapper {
+        width: 100%;
+        justify-content: space-between;
     }
-    .lang-btn {
-        padding: 6px 12px;
-        font-size: 12px;
+    
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 18px;
     }
+    
+    .logo-wrapper {
+        width: calc(100% - 40px);
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -704,9 +707,7 @@ body {
     .nav-menu.active {
         left: 0;
     }
-    .nav-toggle {
-        display: block;
-    }
+    
     .hero-content h1 {
         font-size: 2rem;
     }
