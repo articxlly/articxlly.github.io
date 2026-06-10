@@ -18,7 +18,6 @@ document.querySelectorAll('.nav-link, .book-btn').forEach(link => {
 });
 
 // Smooth scroll for anchor links (ALL internal links work normally)
-// The ONLY button that goes to Google is "Hire Now" (it has target="_blank")
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -58,6 +57,4 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// All buttons retain hover effects (already in CSS)
-// No additional changes needed
-console.log('MeetYou Taxi website loaded - Only "Hire Now" button links to Google');
+console.log('MeetYou Taxi website loaded - Fleet section margins fixed');
