@@ -709,19 +709,32 @@ body {
         flex: 1;
         justify-content: flex-start;
         gap: 8px;
+        min-width: 0;
     }
     
     .logo a {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 120px;
     }
     
     .lang-btn {
         padding: 0.2rem 0.6rem;
         font-size: 10px;
+        gap: 3px;
+        flex-shrink: 0;
     }
     
     .lang-btn i {
         font-size: 11px;
+    }
+    
+    /* TEXT IS VISIBLE on mobile */
+    .lang-btn span {
+        display: inline;
+        font-size: 9px;
     }
     
     .nav-menu {
@@ -788,6 +801,26 @@ body {
     
     .hero-content p {
         font-size: 0.85rem;
+    }
+    
+    .logo a {
+        font-size: 0.85rem;
+        max-width: 90px;
+    }
+    
+    .lang-btn {
+        padding: 0.15rem 0.4rem;
+        font-size: 8px;
+        gap: 2px;
+        border-width: 1.5px;
+    }
+    
+    .lang-btn i {
+        font-size: 9px;
+    }
+    
+    .lang-btn span {
+        font-size: 7px;
     }
     
     .hero-features {
