@@ -716,8 +716,12 @@ body {
     }
     
     .lang-btn {
-        padding: 0.2rem 0.5rem;
+        padding: 0.2rem 0.6rem;
         font-size: 10px;
+    }
+    
+    .lang-btn i {
+        font-size: 11px;
     }
     
     .nav-menu {
