@@ -720,14 +720,6 @@ body {
         font-size: 10px;
     }
     
-    .lang-btn span {
-        display: none;
-    }
-    
-    .lang-btn i {
-        font-size: 14px;
-    }
-    
     .nav-menu {
         position: fixed;
         left: -100%;
