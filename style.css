@@ -63,7 +63,7 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 3px;
     transition: all 0.3s ease;
 }
 
@@ -738,4 +738,79 @@ body {
     .attraction-tags {
         justify-content: center;
     }
-}
+
+    @media (max-width: 480px) {
+    .hero-features {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .feature-item {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.8rem;
+        white-space: normal;
+        word-break: break-word;
+        justify-content: center;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .lang-btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 11px;
+    }
+    
+    .lang-btn span {
+        display: none; /* Hide text, show only globe icon on very small screens */
+    }
+    
+    .logo a {
+        font-size: 1.2rem;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .section-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.8rem;
+    }
+    
+    .about h2, .services h2, .locations h2 {
+        font-size: 1.6rem;
+    }
+    
+    .about p {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    
+    .stat h3 {
+        font-size: 1.5rem;
+    }
+    
+    .service-card-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .service-card-content p {
+        font-size: 0.8rem;
+    }
+    
+    .booking-text {
+        padding: 1.5rem;
+    }
+    
+    .booking-text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .btn-primary-large {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    }
+}   
