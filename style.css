@@ -34,7 +34,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     position: relative;
 }
 
@@ -42,8 +41,10 @@ body {
 .logo-wrapper {
     display: flex;
     align-items: center;
-    gap: 12px;
-    flex-shrink: 0;
+    gap: 10px;
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: visible;
 }
 
 .logo a {
@@ -66,7 +67,7 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 4px;
     transition: all 0.3s ease;
     flex-shrink: 0;
     white-space: nowrap;
@@ -80,6 +81,10 @@ body {
 
 .lang-btn i {
     font-size: 12px;
+}
+
+.lang-btn span {
+    display: inline-block;
 }
 
 .nav-menu {
@@ -119,6 +124,7 @@ body {
     color: #1a1a2e;
     padding: 0.25rem 0.5rem;
     z-index: 1001;
+    flex-shrink: 0;
 }
 
 /* Hero Section */
@@ -692,10 +698,8 @@ body {
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+        position: relative;
+        margin-left: 10px;
     }
     
     .nav-container {
@@ -705,11 +709,12 @@ body {
     }
     
     .logo-wrapper {
-        width: auto;
-        flex: 1;
-        justify-content: flex-start;
+        display: flex;
+        align-items: center;
         gap: 8px;
+        flex: 0 1 auto;
         min-width: 0;
+        overflow: visible;
     }
     
     .logo a {
@@ -717,23 +722,23 @@ body {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 120px;
+        max-width: 100px;
     }
     
     .lang-btn {
-        padding: 0.2rem 0.6rem;
+        padding: 0.2rem 0.5rem;
         font-size: 10px;
         gap: 3px;
         flex-shrink: 0;
+        border-width: 1.5px;
     }
     
     .lang-btn i {
-        font-size: 11px;
+        font-size: 10px;
     }
     
-    /* TEXT IS VISIBLE on mobile */
     .lang-btn span {
-        display: inline;
+        display: inline-block !important;
         font-size: 9px;
     }
     
@@ -805,7 +810,7 @@ body {
     
     .logo a {
         font-size: 0.85rem;
-        max-width: 90px;
+        max-width: 80px;
     }
     
     .lang-btn {
@@ -816,7 +821,7 @@ body {
     }
     
     .lang-btn i {
-        font-size: 9px;
+        font-size: 8px;
     }
     
     .lang-btn span {
